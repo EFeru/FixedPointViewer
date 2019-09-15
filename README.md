@@ -4,7 +4,7 @@ This tool allows to view and convert float data type to fixed-point data type or
 
 ![Preview of the tool]([https://raw.githubusercontent.com/EmanuelFeru/FixedPointViewer/master/figures/example1.png](https://raw.githubusercontent.com/EmanuelFeru/FixedPointViewer/master/figures/example1.png)
  
-The creation of this tool was triggered by my developments on Field Oriented Control (FOC) for BLDC motors on stock hoverboards. The hoverboard heart is an STM32F103RCT microcontroller with quite some capabilitie however, without a Floating Point Unit (FPU). The lack this FPU made impossible the development of an FOC controller with floating point data. Thus, full controller was converted to fixed point (check my other repo for details).
+The creation of this tool was triggered by my developments on Field Oriented Control (FOC) for stock hoverboards BLDC motors. The hoverboard heart is an STM32F103RCT micro-controller with quite some capabilities however, without a Floating Point Unit (FPU). The lack this FPU made impossible the development of an FOC controller with floating point data. Thus, full controller was converted to fixed point (check my other repo for details).
 
 ## What is fixed-point?
 
@@ -13,12 +13,11 @@ A fixed point number format maps a real number onto an integer number by applyin
 In practice the scaling values used are powers of 2 since multiplication and division by such values can be done by shift operations and shift operations are very efficient on most processor architectures. The advantage of fixed point numbers is that using them, under a certain set of rules, they allow for high performance math operations on processors that lack a hardware floating point unit (FPU). So, one of the main purposes of fixed point data representation to be able to perform calculations efficiently without the need for expensive floating point conversions.
 
 More details on fixed point data types can be found here:
-![Data Types and Scaling in Digital Hardware](https://nl.mathworks.com/help/fixedpoint/ug/data-types-and-scaling-in-digital-hardware.html)
-![Range and Precision](https://nl.mathworks.com/help/fixedpoint/ug/range-and-precision.html)
+[Data Types and Scaling in Digital Hardware](https://nl.mathworks.com/help/fixedpoint/ug/data-types-and-scaling-in-digital-hardware.html)
+[Range and Precision](https://nl.mathworks.com/help/fixedpoint/ug/range-and-precision.html)
 
 
 ## SW Installation
----
 
 1. Go to 'FixedPointViewer\exe' and run 'FPViewer_setup.exe'
 2. Follow the installation steps. 
@@ -28,20 +27,19 @@ More details on fixed point data types can be found here:
 
 
 ## How to use it
----
 
 The tool usage is quite straight forward.  The tool works by:
 1. Setting the fixed-point parameters in top-right
 2. Then insert the correspondig float or fixed-point data to be converted
 3. Finally, the data will be graphically displayed for better visualization
 
-### Fixed-point parameters
-The parameters are in the form (Sign, Word, Fraction):
-• Sign: 1 (default) | 0
+#### Fixed-point parameters
+The parameters are in the form (**Sign**, **Word**, **Fraction**):
+• **Sign**: *1 (default) | 0*
  Sign specified as a boolean. A value of 1, indicates a signed data type. A value of 0 indicates an unsigned data type.
-• Word length: 16 (default) | scalar integer
+• **Word length**: *16 (default) | scalar integer*
 Word length, in bits, specified as a scalar integer.
-• Fraction length: 4 (default) | scalar integer
+• **Fraction length**: *4 (default) | scalar integer*
 Fraction length specified as a scalar integer.
 
 ## Examples
@@ -52,5 +50,5 @@ The tool offers 2 examples:
  • Example 2: illustrates how to view and update a 1D map.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4ODczNDg1MV19
+eyJoaXN0b3J5IjpbMTg0OTA2MzM3MSwyMDg4NzM0ODUxXX0=
 -->
