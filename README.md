@@ -13,9 +13,8 @@ A fixed point number format maps a real number onto an integer number by applyin
 In practice the scaling values used are powers of 2 since multiplication and division by such values can be done by shift operations and shift operations are very efficient on most processor architectures. The advantage of fixed point numbers is that using them, under a certain set of rules, they allow for high performance math operations on processors that lack a hardware floating point unit (FPU). So, one of the main purposes of fixed point data representation to be able to perform calculations efficiently without the need for expensive floating point conversions.
 
 More details on fixed point data types can be found here:
-[enter link description here](https://nl.mathworks.com/help/fixedpoint/ug/data-types-and-scaling-in-digital-hardware.html)
-![Data Types and Scaling in Digital Hardware](https://nl.mathworks.com/help/fixedpoint/ug/data-types-and-scaling-in-digital-hardware.html)
-![Range and Precision](https://nl.mathworks.com/help/fixedpoint/ug/range-and-precision.html)
+[Data Types and Scaling in Digital Hardware](https://nl.mathworks.com/help/fixedpoint/ug/data-types-and-scaling-in-digital-hardware.html)
+[Range and Precision](https://nl.mathworks.com/help/fixedpoint/ug/range-and-precision.html)
 
 
 ## SW Installation
@@ -31,25 +30,25 @@ More details on fixed point data types can be found here:
 
 The tool usage is quite straight forward.  The tool works by:
 1. Setting the fixed-point parameters in top-right
-2. Then insert the correspondig float or fixed-point data to be converted
+2. Then insert the corresponding float or fixed-point data to be converted
 3. Finally, the data will be graphically displayed for better visualization
 
 ### Fixed-point parameters
 
-The parameters are in the form (Sign, Word, Fraction):
-• Sign: 1 (default) | 0
- Sign specified as a boolean. A value of 1, indicates a signed data type. A value of 0 indicates an unsigned data type.
-• Word length: 16 (default) | scalar integer
+The parameters are in the form (**Sign**, **Word**, **Fraction**):
+• **Sign**: *1 (default) | 0*
+ Sign specified as a Boolean. A value of 1, indicates a signed data type. A value of 0 indicates an unsigned data type.
+• **Word length**: *16 (default) | scalar integer*
 Word length, in bits, specified as a scalar integer.
-• Fraction length: 4 (default) | scalar integer
+• **Fraction length**: *4 (default) | scalar integer*
 Fraction length specified as a scalar integer.
 
 ## Examples
 
 The tool offers 2 examples:
- • Example 1: illustrates how to view and update a 2D surface map.
- • Example 2: illustrates how to view and update a 1D map.
+ • **Example 1**: illustrates how to view and update a 2D surface map.
+ • **Example 2**: illustrates how to view and update a 1D map.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMDIxNDEwOF19
+eyJoaXN0b3J5IjpbNTY1Mzk1NDcxXX0=
 -->
