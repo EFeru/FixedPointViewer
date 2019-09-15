@@ -10,7 +10,7 @@ The creation of this tool was triggered by my developments on Field Oriented Con
 
 A fixed point number format maps a real number onto an integer number by applying a fixed scaling to it. If for example you have real value 3.1415 and a fixed scaling of 100, the resulting integer value would be 3.1415 * 100 = 314. Reconstructing the real number from this value means applying the reverse operation: 314 / 100 = 3.14.
 
-In practice the scaling values used are powers of 2 since multiplication and division by such values can be done by shift operations and shift operations are very efficient on most processor architectures. The advantage of fixed point numbers is that using them, under a certain set of rules, they allow for high performance math operations on processors that lack a hardware floating point unit (FPU). So, one of the main purposes of fixed point data representation to be able to perform calculations efficiently without the need for expensive floating point conversions.
+In practice the scaling values used are powers of 2 since multiplication and division by such values can be done by shift operations and shift operations are very efficient on most processor architectures. The advantage of fixed point numbers is that using them, under a certain set of rules, they allow for high performance math operations on processors that lack a hardware floating point unit (FPU). So, one of the main purposes of fixed point data representation is to be able to perform calculations efficiently without the need for expensive floating point conversions.
 
 More details on fixed point data types can be found here:
 
