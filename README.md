@@ -3,8 +3,6 @@
 
 ---
 
-<hr>
-<hr>
 <h1 id="fixed-point-viewer">Fixed-Point Viewer</h1>
 <p>This tool allows to view and convert float data type to fixed-point data type or vice-versa. With this tool the user can view and convert fixed-point data types.</p>
 <p><img src="https://raw.githubusercontent.com/EmanuelFeru/FixedPointViewer/master/figures/example1.png" alt="Preview of the tool"></p>
