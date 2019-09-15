@@ -1,6 +1,6 @@
 # Fixed-Point Viewer 1.0
 
-This tool allows to view and convert float data type to fixed-point data type or vice-versa. With this tool the user can view and convert fixed-point data types.
+This tool allows to view and convert float data type to fixed-point data type or vice-versa.
 
 ![Preview of the tool](https://raw.githubusercontent.com/EmanuelFeru/FixedPointViewer/master/figures/example1.png)
  
