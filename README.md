@@ -33,8 +33,7 @@ The tool usage is quite straight forward.  The tool works by:
 2. Then insert the corresponding float or fixed-point data to be converted
 3. Finally, the data will be graphically displayed for better visualization
 
-### Fixed-point parameters
-
+**Fixed-point parameters**
 The parameters are in the form (**Sign**, **Word**, **Fraction**):
 • **Sign**: *1 (default) | 0*
  Sign specified as a Boolean. A value of 1, indicates a signed data type. A value of 0 indicates an unsigned data type.
@@ -50,5 +49,5 @@ The tool offers 2 examples:
  • **Example 2**: illustrates how to view and update a 1D map.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY1Mzk1NDcxXX0=
+eyJoaXN0b3J5IjpbMzE5MjAxMDg4LDU2NTM5NTQ3MV19
 -->
