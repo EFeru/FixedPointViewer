@@ -1,0 +1,119 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration build-checksum="1718395694" file="D:\git\FixedPointViewer\src\FixedPointViewer.prj" location="D:\git\FixedPointViewer\src" name="FixedPointViewer" preferred-package-location="D:\git\FixedPointViewer\exe" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>FPViewer</param.appname>
+    <param.icon>${PROJECT_ROOT}\FixedPointViewer_resources\icon.ico</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\FixedPointViewer_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\FixedPointViewer_resources\icon_32.png</file>
+      <file>${PROJECT_ROOT}\FixedPointViewer_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\FixedPointViewer_resources\icon_16.png</file>
+    </param.icons>
+    <param.version>1.0</param.version>
+    <param.authnamewatermark>Emanuel FERU</param.authnamewatermark>
+    <param.email>aerdronix@gmail.com</param.email>
+    <param.company>Emanuel Feru</param.company>
+    <param.summary>This tool is to view and convert float data type to fixed-point data type or vice-versa.</param.summary>
+    <param.description>With this tool the user can view and convert fixed-point data. The tool works by first setting the fixed-point parameters in top-right and then inserting the correspondig float or fixed-point data to be converted.</param.description>
+    <param.screenshot>D:\git\FixedPointViewer\figures\FPViewer_splash.png</param.screenshot>
+    <param.guid />
+    <param.installpath.string>\Emanuel Feru\FPViewer\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo />
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\for_redistribution_files_only</param.files.only>
+    <param.output>D:\git\FixedPointViewer\exe</param.output>
+    <param.logdir>D:\git\FixedPointViewer\src</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>true</param.web.mcr>
+    <param.package.mcr>false</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>FPViewer_setup</param.web.mcr.name>
+    <param.package.mcr.name>FPViewer_setup</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <param.native.matlab>false</param.native.matlab>
+    <param.checkbox>false</param.checkbox>
+    <param.example />
+    <param.help.text />
+    <unset>
+      <param.version />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.target.install.notes />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.target.type />
+      <param.support.packages />
+      <param.web.mcr />
+      <param.package.mcr />
+      <param.no.mcr />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.create.log />
+      <param.log.file />
+      <param.native.matlab />
+      <param.checkbox />
+      <param.example />
+      <param.help.text />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\FixedPointViewer.m</file>
+    </fileset.main>
+    <fileset.resources />
+    <fileset.package />
+    <fileset.depfun />
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\for_testing" name="splash.png" optional="false">D:\git\FixedPointViewer\src\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\for_testing" name="FPViewer.exe" optional="false">D:\git\FixedPointViewer\src\for_testing\FPViewer.exe</file>
+      <file location="${PROJECT_ROOT}\for_testing" name="readme.txt" optional="true">D:\git\FixedPointViewer\src\for_testing\readme.txt</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2017b</root>
+      <toolboxes>
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+      </toolboxes>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
