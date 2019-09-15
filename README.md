@@ -43,12 +43,8 @@ Word length, in bits, specified as a scalar integer.
 Fraction length specified as a scalar integer.
 
 ## Examples
----
 
 The tool offers 2 examples:
- • Example 1: illustrates how to view and update a 2D surface map.
- • Example 2: illustrates how to view and update a 1D map.
+ • **Example 1**: illustrates how to view and update a 2D surface map.
+ • **Example 2**: illustrates how to view and update a 1D map.
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0OTA2MzM3MSwyMDg4NzM0ODUxXX0=
--->
