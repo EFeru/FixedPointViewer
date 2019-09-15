@@ -37,19 +37,22 @@ The tool usage is quite straight forward.  The tool works by:
 
 #### Fixed-point parameters
 The parameters are in the form (**Sign**, **Word**, **Fraction**):
-- **Sign**: *1 (default) | 0*
+ **Sign**: *1 (default) | 0*
 
     Sign specified as a boolean. A value of 1, indicates a signed data type. A value of 0 indicates an unsigned data type.
-- **Word length**: *16 (default) | scalar integer*
+ **Word length**: *16 (default) | scalar integer*
 
     Word length, in bits, specified as a scalar integer.
-- **Fraction length**: *4 (default) | scalar integer*
+ **Fraction length**: *4 (default) | scalar integer*
 
     Fraction length specified as a scalar integer.
 
 ## Examples
 
 The tool offers 2 examples:
- - **Example 1**: illustrates how to view and update a 2D surface map.
- - **Example 2**: illustrates how to view and update a 1D map.
+  **Example 1**: illustrates how to view and update a 2D surface map.
+  **Example 2**: illustrates how to view and update a 1D map.
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTkyNjI3MzU4NV19
+-->
