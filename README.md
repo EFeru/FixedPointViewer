@@ -2,7 +2,7 @@
 
 This tool allows to view and convert float data type to fixed-point data type or vice-versa. With this tool the user can view and convert fixed-point data types.
 
-![Preview of the tool]([https://raw.githubusercontent.com/EmanuelFeru/FixedPointViewer/master/figures/example1.png](https://raw.githubusercontent.com/EmanuelFeru/FixedPointViewer/master/figures/example1.png)
+![Preview of the tool](https://raw.githubusercontent.com/EmanuelFeru/FixedPointViewer/master/figures/example1.png)
  
 The creation of this tool was triggered by my developments on Field Oriented Control (FOC) for stock hoverboards BLDC motors. The hoverboard heart is an STM32F103RCT micro-controller with quite some capabilities however, without a Floating Point Unit (FPU). The lack this FPU made impossible the development of an FOC controller with floating point data. Thus, full controller was converted to fixed point (check my other repo for details).
 
