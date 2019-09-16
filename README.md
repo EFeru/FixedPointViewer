@@ -4,7 +4,7 @@ This tool allows to view and convert float data type to fixed-point data type or
 
 ![Preview of the tool](https://raw.githubusercontent.com/EmanuelFeru/FixedPointViewer/master/figures/example1.png)
  
-The creation of this tool was triggered by my developments on Field Oriented Control (FOC) for stock hoverboards BLDC motors. The heart of the [hoverboard electronic circuit](https://raw.githubusercontent.com/EmanuelFeru/hoverboard-firmware-hack/master/pinout.png) is an [STM32F103RCT6](https://www.st.com/resource/en/datasheet/stm32f103vc.pdf) micro-controller with quite some capabilities however, it **lacks** the presence of a Floating Point Unit (FPU). The lack of this FPU made impossible the development of an FOC controller with floating point data types. Thus, full controller was converted to fixed point for more efficient calculations (check my other repo for details).
+The creation of this tool was triggered by my developments on Field Oriented Control (FOC) for stock hoverboards BLDC motors. The heart of the [hoverboard electronic circuit](https://raw.githubusercontent.com/EmanuelFeru/hoverboard-firmware-hack/master/pinout.png) is an [STM32F103RCT6](https://www.st.com/resource/en/datasheet/stm32f103vc.pdf) micro-controller with quite some capabilities however, it **lacks** the presence of a Floating Point Unit (FPU). The lack of this FPU made impossible the development of an FOC controller with floating point data types. Thus, full controller was developed in fixed point for more efficient calculations (check my other repo for details).
 
 ## What is fixed-point?
 
