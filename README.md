@@ -1,16 +1,16 @@
 # Fixed-Point Viewer 1.0
 
-This tool allows to view and convert float data type to fixed-point data type or vice-versa. With this tool the user can view and convert fixed-point data types.
+This tool allows to view and convert float data type to fixed-point data type or vice-versa.
 
 ![Preview of the tool](https://raw.githubusercontent.com/EmanuelFeru/FixedPointViewer/master/figures/example1.png)
  
-The creation of this tool was triggered by my developments on Field Oriented Control (FOC) for stock hoverboards BLDC motors. The hoverboard heart is an STM32F103RCT micro-controller with quite some capabilities however, without a Floating Point Unit (FPU). The lack this FPU made impossible the development of an FOC controller with floating point data. Thus, full controller was converted to fixed point (check my other repo for details).
+The creation of this tool was triggered by my developments on Field Oriented Control (FOC) for stock hoverboards BLDC motors. The heart of the [hoverboard electronic circuit](https://raw.githubusercontent.com/EmanuelFeru/hoverboard-firmware-hack/master/pinout.png) is an [STM32F103RCT6](https://www.st.com/resource/en/datasheet/stm32f103vc.pdf) micro-controller with quite some capabilities however, it **lacks** the presence of a hardware **F**loating **P**oint **U**nit (FPU). The lack of this FPU made impossible the development of an FOC controller with floating point data types. Thus, full controller was developed in fixed point for more efficient calculations (check my other repo for details).
 
 ## What is fixed-point?
 
-A fixed point number format maps a real number onto an integer number by applying a fixed scaling to it. If for example you have real value 3.1415 and a fixed scaling of 100, the resulting integer value would be 3.1415 * 100 = 314. Reconstructing the real number from this value means applying the reverse operation: 314 / 100 = 3.14.
+A [fixed point number format](https://en.wikipedia.org/wiki/Fixed-point_arithmetic) maps a real number onto an integer number by applying a fixed scaling to it. If for example you have real value 3.1415 and a fixed scaling of 100, the resulting integer value would be 3.1415 * 100 = 314. Reconstructing the real number from this value means applying the reverse operation: 314 / 100 = 3.14.
 
-In practice the scaling values used are powers of 2 since multiplication and division by such values can be done by shift operations and shift operations are very efficient on most processor architectures. The advantage of fixed point numbers is that using them, under a certain set of rules, they allow for high performance math operations on processors that lack a hardware floating point unit (FPU). So, one of the main purposes of fixed point data representation is to be able to perform calculations efficiently without the need for expensive floating point conversions.
+In practice the scaling values used are powers of 2 since multiplication and division by such values can be done by shift operations and shift operations are very efficient on most processor architectures. The advantage of fixed point numbers is that using them, under a certain set of rules, they allow for high performance math operations on processors that **lack** a hardware **F**loating **P**oint **U**nit (FPU). So, one of the main purposes of fixed point data representation is to be able to perform calculations efficiently without the need for expensive floating point conversions.
 
 More details on fixed point data types can be found here:
 - [Data Types and Scaling in Digital Hardware](https://nl.mathworks.com/help/fixedpoint/ug/data-types-and-scaling-in-digital-hardware.html)
@@ -21,7 +21,7 @@ More details on fixed point data types can be found here:
 
 1. Go to [FixedPointViewer\exe](https://github.com/EmanuelFeru/FixedPointViewer/tree/master/exe) and run 'FPViewer_setup.exe'
 2. Follow the installation steps. 
-3. Two SW components will be installed on your compoter the Matlab Runtime and the application itself. You will need both to run the application.
+3. Two SW components will be installed on your compoter the [Matlab Runtime](https://nl.mathworks.com/products/compiler/matlab-runtime.html) and the application itself. You will need both to run the application.
 4. Once the installation is finished open the FPViewer app
 5. Enjoy!
 
