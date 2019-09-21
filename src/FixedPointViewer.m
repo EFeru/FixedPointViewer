@@ -22,7 +22,7 @@ function varargout = FixedPointViewer(varargin)
 
 % Edit the above text to modify the response to help FixedPointViewer
 
-% Last Modified by GUIDE v2.5 13-Sep-2019 14:34:58
+% Last Modified by GUIDE v2.5 20-Sep-2019 09:54:33
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -253,43 +253,58 @@ lw      = 1.5;
 fs      = 10;
 ms      = 20;
 
+% Check what data to plot
+b_plotFloatData = get(handles.radioPlotFloat, 'Value');
+if b_plotFloatData
+    
+    handleReadVal   = handles.edit_floatVal;
+    handleReadXA    = handles.edit_floatXA;
+    handleReadYA    = handles.edit_floatYA;
+    
+else
+    
+    handleReadVal   = handles.edit_fixdtVal;
+    handleReadXA    = handles.edit_fixdtXA;
+    handleReadYA    = handles.edit_fixdtYA;
+    
+end 
+
+
 % Check input data
 z = get(handles.check_XA, 'Value') + get(handles.check_YA, 'Value');
 
 switch z
 
-    case 0
+    case 0      % Only Values to be plot
     
-        u_floatValStr   = get(handles.edit_floatVal,'String');
-        u_floatVal      = str2double(split(u_floatValStr,','));
-        plot(handles.axesFig, u_floatVal,...
+        u_ValStr    = get(handleReadVal,'String');
+        u_Val       = str2double(split(u_ValStr,','));
+        plot(handles.axesFig, u_Val,...
             'Marker', '.',...
             'MarkerSize',ms,...
             'Color', color,...
             'Linewidth', lw);
         grid on;
         handles.axesFig.FontSize = fs; 
-        title('Float Data Plot');
         xlabel('XAxis','FontSize',fs,'FontWeight','bold');
         ylabel('Values','FontSize',fs,'FontWeight','bold');         
         
-    case 1 
+    case 1      % 1D map to be plot
         
-        u_floatValStr   = get(handles.edit_floatVal,'String');
-        u_floatXAStr    = get(handles.edit_floatXA,'String');
-        u_floatVal      = str2double(split(u_floatValStr,','));
-        u_floatXA       = str2double(split(u_floatXAStr,','));
+        u_ValStr    = get(handleReadVal,    'String');
+        u_XAStr     = get(handleReadXA,     'String');
+        u_Val       = str2double(split(u_ValStr,','));
+        u_XA        = str2double(split(u_XAStr,','));
         
-        if (length(u_floatVal) == length(u_floatXA))
+        if (length(u_Val) == length(u_XA))
             
-            plot(handles.axesFig, u_floatXA, u_floatVal,...
+            plot(handles.axesFig, u_XA, u_Val,...
                 'Marker', '.',...
                 'MarkerSize',ms,...
                 'Color', color,...
                 'Linewidth', lw);
             grid on;
             handles.axesFig.FontSize = fs;
-            title('Float Data Plot');
             xlabel('XAxis','FontSize',fs,'FontWeight','bold');
             ylabel('Values','FontSize',fs,'FontWeight','bold');          
               
@@ -301,28 +316,27 @@ switch z
             
         end
         
-    otherwise  
+    otherwise       % 2D surface to be plot
         
-        u_floatValStr   = get(handles.edit_floatVal,'String');
-        u_floatXAStr    = get(handles.edit_floatXA,'String');
-        u_floatYAStr    = get(handles.edit_floatYA,'String');
-        u_floatVal      = str2double(split(u_floatValStr,','));
-        u_floatXA       = str2double(split(u_floatXAStr,','));
-        u_floatYA       = str2double(split(u_floatYAStr,','));
+        u_ValStr    = get(handleReadVal,    'String');
+        u_XAStr     = get(handleReadXA,     'String');
+        u_YAStr     = get(handleReadYA,     'String');
+        u_Val       = str2double(split(u_ValStr,','));
+        u_XA        = str2double(split(u_XAStr,','));
+        u_YA        = str2double(split(u_YAStr,','));
         
-        if (length(u_floatVal) == length(u_floatXA)*length(u_floatYA) && length(u_floatVal) > 1)
+        if (length(u_Val) == length(u_XA)*length(u_YA) && length(u_Val) > 1)
             
-            yn = length(u_floatYA);
-            xn = length(u_floatXA);
+            yn = length(u_YA);
+            xn = length(u_XA);
             Z = zeros(yn, xn);
             for k = 1:yn
-                Z(k,:) = u_floatVal((k-1)*xn+1:k*xn);
+                Z(k,:) = u_Val((k-1)*xn+1:k*xn);
             end
             
-            s = surf(handles.axesFig, u_floatXA, u_floatYA, Z);
+            s = surf(handles.axesFig, u_XA, u_YA, Z);
             grid on;
             handles.axesFig.FontSize = fs;
-            title('Float Data Plot');
             xlabel('XAxis','FontSize',fs,'FontWeight','bold');
             ylabel('YAxis','FontSize',fs,'FontWeight','bold');
             zlabel('Values','FontSize',fs,'FontWeight','bold');
@@ -335,16 +349,15 @@ switch z
             grid on
             lighting gouraud         
             
-        elseif (length(u_floatXA)==length(u_floatVal) && length(u_floatXA)==length(u_floatYA))
+        elseif (length(u_XA)==length(u_Val) && length(u_XA)==length(u_YA))
             
-            plot3(handles.axesFig, u_floatXA, u_floatYA, u_floatVal,...
+            plot3(handles.axesFig, u_XA, u_YA, u_Val,...
                 'Marker', '.',...
                 'MarkerSize',ms,...
                 'Color', color,...
                 'Linewidth', lw);
             grid on;
             handles.axesFig.FontSize = fs;
-            title('Float Data Plot');
             xlabel('XAxis','FontSize',fs,'FontWeight','bold');
             ylabel('YAxis','FontSize',fs,'FontWeight','bold');
             zlabel('Values','FontSize',fs,'FontWeight','bold');
@@ -706,6 +719,24 @@ else
     set(handles.text_fixdtYAxis,    'Enable', 'off');
     set(handles.edit_fixdtYA,       'Enable', 'off');  
 end
+
+% --- Executes on button press in radioPlotFloat.
+function radioPlotFloat_Callback(hObject, eventdata, handles)
+% hObject    handle to radioPlotFloat (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of radioPlotFloat
+plotData(handles);
+
+% --- Executes on button press in radioPlotFixdt.
+function radioPlotFixdt_Callback(hObject, eventdata, handles)
+% hObject    handle to radioPlotFixdt (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of radioPlotFixdt
+plotData(handles);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
