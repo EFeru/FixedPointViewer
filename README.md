@@ -21,7 +21,7 @@ More details on fixed point data types can be found here:
 
 1. Go to [FixedPointViewer\exe](https://github.com/EmanuelFeru/FixedPointViewer/tree/master/exe) and run 'FPViewer_setup.exe'
 2. Follow the installation steps. 
-3. Two SW components will be installed on your compoter the [Matlab Runtime](https://nl.mathworks.com/products/compiler/matlab-runtime.html) and the application itself. You will need both to run the application.
+3. Two SW components will be installed on your computer: the [Matlab Runtime](https://nl.mathworks.com/products/compiler/matlab-runtime.html) and the application itself. You will need both to run the application.
 4. Once the installation is finished open the FPViewer app
 5. Enjoy!
 
